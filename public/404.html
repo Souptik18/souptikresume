@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="refresh" content="0; URL='./index.html'" />
+</head>
+
+<body>
+  <script>
+    const redirectToIndex = () => {
+      const location = window.location;
+      const basePath = '/souptikresume/';
+      if (location.pathname !== basePath + 'index.html') {
+        location.replace(location.protocol + '//' + location.host + basePath);
+      }
+    };
+    redirectToIndex();
+  </script>
+</body>
+
+</html>
