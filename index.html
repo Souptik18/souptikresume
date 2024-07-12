@@ -3,19 +3,28 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="./src/components/Images/roundProfile.jpg" type="image/x-icon">
-  <link rel="manifest" href="./public/manifest.json">
+  <link rel="shortcut icon" href="/souptikresume/src/components/Images/roundProfile.jpg" type="image/x-icon">
+  <link rel="manifest" href="/souptikresume/manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" rel="stylesheet">
-
   <title>Souptik Sarkar</title>
+  <script type="text/javascript">
+    (function () {
+      // Check if there's a redirect parameter and update the history
+      var redirect = new URLSearchParams(window.location.search).get('redirect');
+      if (redirect) {
+        var newUrl = window.location.origin + '/souptikresume' + redirect;
+        window.history.replaceState(null, '', newUrl);
+      }
+    })();
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
   <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
-  <script type="module" src="./src/main.jsx"></script>
+  <script type="module" src="/souptikresume/src/main.jsx"></script>
 </body>
 
 </html>
